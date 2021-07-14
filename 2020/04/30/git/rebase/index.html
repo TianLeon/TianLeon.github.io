@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="TianLeon">
+    
+    <title>
+        
+            Rebase |
+        
+        Leon&#39;s Blog
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://img0.baidu.com/it/u=861876668,2170248895&fm=26&fmt=auto&gp=0.jpg">
+    
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":false,"init_open":false},"style":{"primary_color":"#00FA9A","avatar":"http://resource.cuilb.cn/5f44100c4797fb52f638268ab1ab2bc6.jpg","favicon":"https://img0.baidu.com/it/u=861876668,2170248895&fm=26&fmt=auto&gp=0.jpg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":true},"first_screen":{"enable":true,"background_img":"/images/bg.svg","description":"Tears make you stronger."},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":false},"code_copy":{"enable":false,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 月前","year":"%s 年前"};
+  </script>
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+            <a class="logo-title" href="/">
+                Leon&#39;s Blog
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="fade-in-down-animation">
+    <div class="article-content-container">
+
+        <div class="article-title">
+            <span class="title-hover-animation">Rebase</span>
+        </div>
+
+        
+            <div class="article-header">
+                <div class="avatar">
+                    <img src="http://resource.cuilb.cn/5f44100c4797fb52f638268ab1ab2bc6.jpg">
+                </div>
+                <div class="info">
+                    <div class="author">
+                        <span class="name">TianLeon</span>
+                        
+                            <span class="author-label">Lv4</span>
+                        
+                    </div>
+                    <div class="meta-info">
+                        <div class="article-meta-info">
+    <span class="article-date article-meta-item">
+        <i class="fas fa-edit"></i>&nbsp;2020-04-30 15:24:34
+    </span>
+    
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/git/">git</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+
+    
+    
+    
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        
+
+        <div class="article-content markdown-body">
+            <h4 id="Rebase"><a href="#Rebase" class="headerlink" title="Rebase"></a>Rebase</h4><hr>
+<p>在上一节我们看到了，多人在同一个分支上协作时，很容易出现冲突。即使没有冲突，后push的童鞋不得不先pull，在本地合并，然后才能push成功。</p>
+<p>每次合并再push后，分支变成了这样：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit</span></span><br><span class="line">* d1be385 (HEAD -&gt; master, origin/master) init hello</span><br><span class="line">*   e5e69f1 Merge branch &#x27;dev&#x27;</span><br><span class="line">|\  </span><br><span class="line">| *   57c53ab (origin/dev, dev) fix env conflict</span><br><span class="line">| |\  </span><br><span class="line">| | * 7a5e5dd add env</span><br><span class="line">| * | 7bd91f1 add new env</span><br><span class="line">| |/  </span><br><span class="line">* |   12a631b merged bug fix 101</span><br><span class="line">|\ \  </span><br><span class="line">| * | 4c805e2 fix bug 101</span><br><span class="line">|/ /  </span><br><span class="line">* |   e1e9c68 merge with no-ff</span><br><span class="line">|\ \  </span><br><span class="line">| |/  </span><br><span class="line">| * f52c633 add merge</span><br><span class="line">|/  </span><br><span class="line">*   cf810e4 conflict fixed</span><br></pre></td></tr></table></figure>
+
+<p>总之看上去很乱，有强迫症的童鞋会问：为什么Git的提交历史不能是一条干净的直线？</p>
+<p>其实是可以做到的！</p>
+<p>Git有一种称为rebase的操作，有人把它翻译成“变基”。</p>
+<p>先不要随意展开想象。我们还是从实际问题出发，看看怎么把分叉的提交变成直线。</p>
+<p>在和远程分支同步后，我们对<code>hello.py</code>这个文件做了两次提交。用<code>git log</code>命令看看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit</span></span><br><span class="line">* 582d922 (HEAD -&gt; master) add author</span><br><span class="line">* 8875536 add comment</span><br><span class="line">* d1be385 (origin/master) init hello</span><br><span class="line">*   e5e69f1 Merge branch &#x27;dev&#x27;</span><br><span class="line">|\  </span><br><span class="line">| *   57c53ab (origin/dev, dev) fix env conflict</span><br><span class="line">| |\  </span><br><span class="line">| | * 7a5e5dd add env</span><br><span class="line">| * | 7bd91f1 add new env</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>注意到Git用<code>(HEAD -&gt; master)</code>和<code>(origin/master)</code>标识出当前分支的HEAD和远程origin的位置分别是<code>582d922 add author</code>和<code>d1be385 init hello</code>，本地分支比远程分支快两个提交。</p>
+<p>现在我们尝试推送本地分支：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git push origin master</span></span><br><span class="line">To github.com:michaelliao/learngit.git</span><br><span class="line"> ! [rejected]        master -&gt; master (fetch first)</span><br><span class="line">error: failed to push some refs to &#x27;git@github.com:michaelliao/learngit.git&#x27;</span><br><span class="line">hint: Updates were rejected because the remote contains work that you do</span><br><span class="line">hint: not have locally. This is usually caused by another repository pushing</span><br><span class="line">hint: to the same ref. You may want to first integrate the remote changes</span><br><span class="line">hint: (e.g., &#x27;git pull ...&#x27;) before pushing again.</span><br><span class="line">hint: See the &#x27;Note about fast-forwards&#x27; in &#x27;git push --help&#x27; for details.</span><br></pre></td></tr></table></figure>
+
+<p>很不幸，失败了，这说明有人先于我们推送了远程分支。按照经验，先pull一下：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git pull</span></span><br><span class="line">remote: Counting objects: 3, done.</span><br><span class="line">remote: Compressing objects: 100% (1/1), done.</span><br><span class="line">remote: Total 3 (delta 1), reused 3 (delta 1), pack-reused 0</span><br><span class="line">Unpacking objects: 100% (3/3), done.</span><br><span class="line">From github.com:michaelliao/learngit</span><br><span class="line">   d1be385..f005ed4  master     -&gt; origin/master</span><br><span class="line"> * [new tag]         v1.0       -&gt; v1.0</span><br><span class="line">Auto-merging hello.py</span><br><span class="line">Merge made by the &#x27;recursive&#x27; strategy.</span><br><span class="line"> hello.py | 1 +</span><br><span class="line"> 1 file changed, 1 insertion(+)</span><br></pre></td></tr></table></figure>
+
+<p>再用<code>git status</code>看看状态：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git status</span></span><br><span class="line">On branch master</span><br><span class="line">Your branch is ahead of &#x27;origin/master&#x27; by 3 commits.</span><br><span class="line">  (use &quot;git push&quot; to publish your local commits)</span><br><span class="line"></span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<p>加上刚才合并的提交，现在我们本地分支比远程分支超前3个提交。</p>
+<p>用<code>git log</code>看看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit</span></span><br><span class="line">*   e0ea545 (HEAD -&gt; master) Merge branch &#x27;master&#x27; of github.com:michaelliao/learngit</span><br><span class="line">|\  </span><br><span class="line">| * f005ed4 (origin/master) set exit=1</span><br><span class="line">* | 582d922 add author</span><br><span class="line">* | 8875536 add comment</span><br><span class="line">|/  </span><br><span class="line">* d1be385 init hello</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>对强迫症童鞋来说，现在事情有点不对头，提交历史分叉了。如果现在把本地分支push到远程，有没有问题？</p>
+<p>有！</p>
+<p>什么问题？</p>
+<p>不好看！</p>
+<p>有没有解决方法？</p>
+<p>有！</p>
+<p>这个时候，rebase就派上了用场。我们输入命令<code>git rebase</code>试试：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git rebase</span></span><br><span class="line">First, rewinding head to replay your work on top of it...</span><br><span class="line">Applying: add comment</span><br><span class="line">Using index info to reconstruct a base tree...</span><br><span class="line">M	hello.py</span><br><span class="line">Falling back to patching base and 3-way merge...</span><br><span class="line">Auto-merging hello.py</span><br><span class="line">Applying: add author</span><br><span class="line">Using index info to reconstruct a base tree...</span><br><span class="line">M	hello.py</span><br><span class="line">Falling back to patching base and 3-way merge...</span><br><span class="line">Auto-merging hello.py</span><br></pre></td></tr></table></figure>
+
+<p>输出了一大堆操作，到底是啥效果？再用<code>git log</code>看看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit</span></span><br><span class="line">* 7e61ed4 (HEAD -&gt; master) add author</span><br><span class="line">* 3611cfe add comment</span><br><span class="line">* f005ed4 (origin/master) set exit=1</span><br><span class="line">* d1be385 init hello</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>原本分叉的提交现在变成一条直线了！这种神奇的操作是怎么实现的？其实原理非常简单。我们注意观察，发现Git把我们本地的提交“挪动”了位置，放到了<code>f005ed4 (origin/master) set exit=1</code>之后，这样，整个提交历史就成了一条直线。rebase操作前后，最终的提交内容是一致的，但是，我们本地的commit修改内容已经变化了，它们的修改不再基于<code>d1be385 init hello</code>，而是基于<code>f005ed4 (origin/master) set exit=1</code>，但最后的提交<code>7e61ed4</code>内容是一致的。</p>
+<p>这就是rebase操作的特点：把分叉的提交历史“整理”成一条直线，看上去更直观。缺点是本地的分叉提交已经被修改过了。</p>
+<p>最后，通过push操作把本地分支推送到远程：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Mac:~/learngit michael$ git push origin master</span><br><span class="line">Counting objects: 6, done.</span><br><span class="line">Delta compression using up to 4 threads.</span><br><span class="line">Compressing objects: 100% (5/5), done.</span><br><span class="line">Writing objects: 100% (6/6), 576 bytes | 576.00 KiB/s, done.</span><br><span class="line">Total 6 (delta 2), reused 0 (delta 0)</span><br><span class="line">remote: Resolving deltas: 100% (2/2), completed with 1 local object.</span><br><span class="line">To github.com:michaelliao/learngit.git</span><br><span class="line">   f005ed4..7e61ed4  master -&gt; master</span><br></pre></td></tr></table></figure>
+
+<p>再用<code>git log</code>看看效果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> git <span class="built_in">log</span> --graph --pretty=oneline --abbrev-commit</span></span><br><span class="line">* 7e61ed4 (HEAD -&gt; master, origin/master) add author</span><br><span class="line">* 3611cfe add comment</span><br><span class="line">* f005ed4 set exit=1</span><br><span class="line">* d1be385 init hello</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>远程分支的提交历史也是一条直线。</p>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>rebase操作可以把本地未push的分叉提交历史整理成直线；</li>
+<li>rebase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比。</li>
+</ul>
+
+        </div>
+
+        
+
+        
+            <div class="article-nav">
+                
+                    <div class="article-prev">
+                        <a class="prev"
+                           rel="prev"
+                           href="/2020/04/30/git/%E4%BB%8E%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%85%8B%E9%9A%86/"
+                        >
+                            <span class="left arrow-icon flex-center">
+                              <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">从远程库克隆</span>
+                                <span class="post-nav-item">上一篇</span>
+                            </span>
+                        </a>
+                    </div>
+                
+                
+                    <div class="article-next">
+                        <a class="next"
+                           rel="next"
+                           href="/2020/04/30/git/%E5%88%86%E6%94%AF%E7%AD%96%E7%95%A5%E7%AE%A1%E7%90%86/"
+                        >
+                            <span class="title flex-center">
+                                <span class="post-nav-title-item">分支管理策略</span>
+                                <span class="post-nav-item">下一篇</span>
+                            </span>
+                            <span class="right arrow-icon flex-center">
+                              <i class="fas fa-chevron-right"></i>
+                            </span>
+                        </a>
+                    </div>
+                
+            </div>
+        
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2018</span>&nbsp;-&nbsp;
+            
+            2021&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a href="/">TianLeon</a>
+        </div>
+        
+        <div class="theme-info info-item">
+            由 <a target="_blank" href="https://hexo.io">Hexo</a> 驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+        <div class="post-tools">
+            <div class="post-tools-container">
+    <ul class="tools-list">
+        <!-- TOC aside toggle -->
+        
+            <li class="tools-item page-aside-toggle">
+                <i class="fas fa-outdent"></i>
+            </li>
+        
+
+        <!-- go comment -->
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+        <aside class="page-aside">
+            <div class="post-toc-wrap">
+    <div class="post-toc">
+        <ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Rebase"><span class="nav-number">1.</span> <span class="nav-text">Rebase</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B0%8F%E7%BB%93"><span class="nav-number"></span> <span class="nav-text">小结</span></a>
+    </div>
+</div>
+        </aside>
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+        
+<script src="/js/left-side-toggle.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+<script src="/js/toc.js"></script>
+
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
